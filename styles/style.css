@@ -1,12 +1,13 @@
-header {
+.flex-container {
     display: flex;
+    flex-direction: column;
     background-color: #E43C61;
-    padding: 20px;
 }
 
-header .profile-name {
-    /*0display: flex;*/
-    margin: 0 0 0 10px;
+header .pic {
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
 }
 
 header h3, header h4 {
@@ -15,7 +16,6 @@ header h3, header h4 {
 
 header .follow-btn {
     display: flex;
-    margin: 0 0 0 auto;
     align-items:center;
 }
 
@@ -53,7 +53,6 @@ ul.square {
 
 div.internal {
     background-color: #DCA053;
-    width: 100%;
     margin: auto;
     padding: 20px;
     /*border: 5px solid black;*/
@@ -66,7 +65,8 @@ div.backgroundExternal {
 }
 
 img {
-    width: 20%;
+    height: auto;
+    width: 5%;
     border-radius: 50%;
 }
 
@@ -84,22 +84,21 @@ h1 {
 
 @media only screen and (min-width: 600px) {
     /*tablets */
+    header .follow-btn {
+        display: flex;
+        align-items:center;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+
     div.internal {
         background-color: #81C26E;
     }
 
-    div.backgroundExternal {
-        background-color: #49AD7D;
-    }
-
-    img {
-        width: 30%;
-    }
-
-    
     h1 {
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
         font-size: 35px;
     }
 
@@ -114,12 +113,22 @@ h1 {
 
 @media only screen and (min-width: 768px) {
     /*destop*/
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    div.internal {
+        background-color: #81C26E;
+    }
+    
+
     table, tr ,td ,th {
         font-size: 3;
     }
 
     img {
-        max-width: 10%;
+        width: 20%;
         height: auto;
     }
     
@@ -133,11 +142,13 @@ h1 {
         background-color: white;/*#FF9671*/
     }
 
-
-    
-
-    
     ul.square {
         list-style-type: square;
+    }
+
+    header .follow-btn {
+        display: flex;
+        margin: 0 0 0 auto;
+        align-items:center;
     }
 }
