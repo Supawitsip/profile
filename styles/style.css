@@ -1,3 +1,31 @@
+header {
+    display: flex;
+    background-color: #E43C61;
+    padding: 20px;
+}
+
+header .profile-name {
+    /*0display: flex;*/
+    margin: 0 0 0 10px;
+}
+
+header h3, header h4 {
+    margin: 0;
+}
+
+header .follow-btn {
+    display: flex;
+    margin: 0 0 0 auto;
+    align-items:center;
+}
+
+header .follow-btn button {
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+
 table, tr ,td ,th {
     padding: 10px;
     border: 1px solid black;
@@ -19,34 +47,51 @@ td {
     background-color: lightsteelblue;
 }
 
-
 ul.square {
     list-style-type: square;
 }
 
-body {
-    background-color: lightblue;
+div.internal {
+    background-color: #DCA053;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    /*border: 5px solid black;*/
+}
+
+div.backgroundExternal {
+    background-color: #A16C21;
+    list-style-type: none;   
+    overflow: hidden;
 }
 
 img {
     width: 20%;
+    border-radius: 50%;
 }
 
 h1 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+
 }
 
-h2 {
-    font-size: 10px;
+
+#box-container {
+    height: 500px;
+    display:flex ;
 }
 
 @media only screen and (min-width: 600px) {
     /*tablets */
-    body {
-      background-color: rgb(173, 253, 162);
+    div.internal {
+        background-color: #81C26E;
     }
+
+    div.backgroundExternal {
+        background-color: #49AD7D;
+    }
+
     img {
         width: 30%;
     }
@@ -74,7 +119,7 @@ h2 {
     }
 
     img {
-        max-width: 40%;
+        max-width: 10%;
         height: auto;
     }
     
@@ -84,30 +129,15 @@ h2 {
         margin-right: auto;
     }
     
-    th {
-        background-color: greenyellow;
+    div.internal {
+        background-color: white;/*#FF9671*/
     }
+
+
     
-    td {
-        background-color: lightsteelblue;
-    }
-    
-    body {
-        width: 80%;
-        margin: 0 auto;
-        background-color: rgba(245, 217, 195, 0.918);
-        padding: 20px;
-        border: 5px solid black;
-    }
-    
-    h1 {
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 50px;
-    }
+
     
     ul.square {
         list-style-type: square;
     }
-    
 }
